@@ -17,11 +17,15 @@ angular.module('angularFocus')
 })
 
 .factory('$focus', ['$rootScope', '$timeout', function ($rootScope, $timeout) {
-  return function(name) {
-    $timeout(function (){
-      if(!$rootScope.$$phase) {
-        $rootScope.$broadcast('focusOn', name);
-      }
-    });
+  var broadcastFocus = function(name) {
+    if(!$rootScope.$$phase) {
+      $rootScope.$broadcast('focusOn', name);
+    }
+    else {
+      $timeout(function(){
+        broadcastFocus(name)
+      }, 10);
+    }
   }
+  return broadcastFocus;
 }]);
