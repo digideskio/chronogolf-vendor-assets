@@ -1,0 +1,19 @@
+{
+  "name": "chronogolf-vendor-assets",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chronogolf/chronogolf-vendor-assets",
+  "authors": [
+    "Sebastien Rothlisberger",
+    "Vincent Kammerer <vkammerer@gmail.com>"
+  ],
+  "description": "Vendor javascript utils for chronogolf",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
